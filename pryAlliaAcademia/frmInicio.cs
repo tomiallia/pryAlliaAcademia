@@ -16,5 +16,10 @@ namespace pryAlliaAcademia
         {
             InitializeComponent();
         }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

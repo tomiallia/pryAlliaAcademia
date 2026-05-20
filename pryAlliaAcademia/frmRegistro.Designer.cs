@@ -34,7 +34,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPlan = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.cmbRegistro = new System.Windows.Forms.ComboBox();
+            this.cmbPlan = new System.Windows.Forms.ComboBox();
             this.lblActivo = new System.Windows.Forms.Label();
             this.chkActivo = new System.Windows.Forms.CheckBox();
             this.btnListado = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.grbRegistro.Controls.Add(this.btnListado);
             this.grbRegistro.Controls.Add(this.chkActivo);
             this.grbRegistro.Controls.Add(this.lblActivo);
-            this.grbRegistro.Controls.Add(this.cmbRegistro);
+            this.grbRegistro.Controls.Add(this.cmbPlan);
             this.grbRegistro.Controls.Add(this.txtNombre);
             this.grbRegistro.Controls.Add(this.lblPlan);
             this.grbRegistro.Controls.Add(this.lblNombre);
@@ -120,15 +120,19 @@
             this.txtNombre.Size = new System.Drawing.Size(156, 25);
             this.txtNombre.TabIndex = 4;
             // 
-            // cmbRegistro
+            // cmbPlan
             // 
-            this.cmbRegistro.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.cmbRegistro.FormattingEnabled = true;
-            this.cmbRegistro.Location = new System.Drawing.Point(111, 121);
-            this.cmbRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbRegistro.Name = "cmbRegistro";
-            this.cmbRegistro.Size = new System.Drawing.Size(156, 26);
-            this.cmbRegistro.TabIndex = 5;
+            this.cmbPlan.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.cmbPlan.FormattingEnabled = true;
+            this.cmbPlan.Items.AddRange(new object[] {
+            "Plan 1 ",
+            "Plan 2 ",
+            "Plan 3"});
+            this.cmbPlan.Location = new System.Drawing.Point(111, 121);
+            this.cmbPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbPlan.Name = "cmbPlan";
+            this.cmbPlan.Size = new System.Drawing.Size(156, 26);
+            this.cmbPlan.TabIndex = 5;
             // 
             // lblActivo
             // 
@@ -183,6 +187,7 @@
             this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // frmRegistro
             // 
@@ -210,7 +215,7 @@
         private System.Windows.Forms.Label lblPlan;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblActivo;
-        private System.Windows.Forms.ComboBox cmbRegistro;
+        private System.Windows.Forms.ComboBox cmbPlan;
         private System.Windows.Forms.CheckBox chkActivo;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnCancelar;
