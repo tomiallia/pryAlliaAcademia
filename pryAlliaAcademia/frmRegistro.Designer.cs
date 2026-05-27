@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistro));
             this.grbRegistro = new System.Windows.Forms.GroupBox();
-            this.mtbCodigo = new System.Windows.Forms.MaskedTextBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblPlan = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.cmbPlan = new System.Windows.Forms.ComboBox();
-            this.lblActivo = new System.Windows.Forms.Label();
-            this.chkActivo = new System.Windows.Forms.CheckBox();
-            this.btnListado = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnListado = new System.Windows.Forms.Button();
+            this.chkActivo = new System.Windows.Forms.CheckBox();
+            this.lblActivo = new System.Windows.Forms.Label();
+            this.cmbPlan = new System.Windows.Forms.ComboBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblPlan = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.mtbCodigo = new System.Windows.Forms.MaskedTextBox();
             this.grbRegistro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,80 +60,57 @@
             this.grbRegistro.Controls.Add(this.mtbCodigo);
             this.grbRegistro.Font = new System.Drawing.Font("Tahoma", 11F);
             this.grbRegistro.Location = new System.Drawing.Point(16, 17);
-            this.grbRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbRegistro.Margin = new System.Windows.Forms.Padding(4);
             this.grbRegistro.Name = "grbRegistro";
-            this.grbRegistro.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grbRegistro.Size = new System.Drawing.Size(290, 252);
+            this.grbRegistro.Padding = new System.Windows.Forms.Padding(4);
+            this.grbRegistro.Size = new System.Drawing.Size(339, 267);
             this.grbRegistro.TabIndex = 0;
             this.grbRegistro.TabStop = false;
             this.grbRegistro.Text = "Registro Materia / Asignatura";
             // 
-            // mtbCodigo
+            // btnRegistrar
             // 
-            this.mtbCodigo.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.mtbCodigo.Location = new System.Drawing.Point(111, 35);
-            this.mtbCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.mtbCodigo.Mask = "99999";
-            this.mtbCodigo.Name = "mtbCodigo";
-            this.mtbCodigo.Size = new System.Drawing.Size(156, 25);
-            this.mtbCodigo.TabIndex = 0;
-            this.mtbCodigo.ValidatingType = typeof(int);
+            this.btnRegistrar.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.btnRegistrar.Location = new System.Drawing.Point(229, 199);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(102, 32);
+            this.btnRegistrar.TabIndex = 10;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // lblCodigo
+            // btnCancelar
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.lblCodigo.Location = new System.Drawing.Point(8, 38);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(51, 18);
-            this.lblCodigo.TabIndex = 1;
-            this.lblCodigo.Text = "Código";
+            this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.btnCancelar.Location = new System.Drawing.Point(122, 199);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(102, 32);
+            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // lblNombre
+            // btnListado
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.lblNombre.Location = new System.Drawing.Point(8, 81);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(60, 18);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Nombre";
+            this.btnListado.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.btnListado.Location = new System.Drawing.Point(12, 199);
+            this.btnListado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnListado.Name = "btnListado";
+            this.btnListado.Size = new System.Drawing.Size(102, 32);
+            this.btnListado.TabIndex = 8;
+            this.btnListado.Text = "Listado";
+            this.btnListado.UseVisualStyleBackColor = true;
             // 
-            // lblPlan
+            // chkActivo
             // 
-            this.lblPlan.AutoSize = true;
-            this.lblPlan.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.lblPlan.Location = new System.Drawing.Point(8, 124);
-            this.lblPlan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPlan.Name = "lblPlan";
-            this.lblPlan.Size = new System.Drawing.Size(34, 18);
-            this.lblPlan.TabIndex = 3;
-            this.lblPlan.Text = "Plan";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtNombre.Location = new System.Drawing.Point(111, 78);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(156, 25);
-            this.txtNombre.TabIndex = 4;
-            // 
-            // cmbPlan
-            // 
-            this.cmbPlan.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.cmbPlan.FormattingEnabled = true;
-            this.cmbPlan.Items.AddRange(new object[] {
-            "Plan 1 ",
-            "Plan 2 ",
-            "Plan 3"});
-            this.cmbPlan.Location = new System.Drawing.Point(111, 121);
-            this.cmbPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbPlan.Name = "cmbPlan";
-            this.cmbPlan.Size = new System.Drawing.Size(156, 26);
-            this.cmbPlan.TabIndex = 5;
+            this.chkActivo.AutoSize = true;
+            this.chkActivo.Location = new System.Drawing.Point(111, 167);
+            this.chkActivo.Margin = new System.Windows.Forms.Padding(4);
+            this.chkActivo.Name = "chkActivo";
+            this.chkActivo.Size = new System.Drawing.Size(18, 17);
+            this.chkActivo.TabIndex = 7;
+            this.chkActivo.UseVisualStyleBackColor = true;
             // 
             // lblActivo
             // 
@@ -141,62 +119,82 @@
             this.lblActivo.Location = new System.Drawing.Point(8, 164);
             this.lblActivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblActivo.Name = "lblActivo";
-            this.lblActivo.Size = new System.Drawing.Size(47, 18);
+            this.lblActivo.Size = new System.Drawing.Size(59, 23);
             this.lblActivo.TabIndex = 6;
             this.lblActivo.Text = "Activo";
             // 
-            // chkActivo
+            // cmbPlan
             // 
-            this.chkActivo.AutoSize = true;
-            this.chkActivo.Location = new System.Drawing.Point(111, 167);
-            this.chkActivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chkActivo.Name = "chkActivo";
-            this.chkActivo.Size = new System.Drawing.Size(15, 14);
-            this.chkActivo.TabIndex = 7;
-            this.chkActivo.UseVisualStyleBackColor = true;
+            this.cmbPlan.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.cmbPlan.FormattingEnabled = true;
+            this.cmbPlan.Location = new System.Drawing.Point(111, 121);
+            this.cmbPlan.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPlan.Name = "cmbPlan";
+            this.cmbPlan.Size = new System.Drawing.Size(220, 30);
+            this.cmbPlan.TabIndex = 5;
             // 
-            // btnListado
+            // txtNombre
             // 
-            this.btnListado.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.btnListado.Location = new System.Drawing.Point(11, 201);
-            this.btnListado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnListado.Name = "btnListado";
-            this.btnListado.Size = new System.Drawing.Size(80, 29);
-            this.btnListado.TabIndex = 8;
-            this.btnListado.Text = "Listado";
-            this.btnListado.UseVisualStyleBackColor = true;
+            this.txtNombre.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtNombre.Location = new System.Drawing.Point(111, 78);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(220, 30);
+            this.txtNombre.TabIndex = 4;
             // 
-            // btnCancelar
+            // lblPlan
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.btnCancelar.Location = new System.Drawing.Point(99, 201);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(80, 29);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.lblPlan.AutoSize = true;
+            this.lblPlan.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lblPlan.Location = new System.Drawing.Point(8, 124);
+            this.lblPlan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPlan.Name = "lblPlan";
+            this.lblPlan.Size = new System.Drawing.Size(45, 23);
+            this.lblPlan.TabIndex = 3;
+            this.lblPlan.Text = "Plan";
             // 
-            // btnRegistrar
+            // lblNombre
             // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.btnRegistrar.Location = new System.Drawing.Point(187, 201);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(80, 29);
-            this.btnRegistrar.TabIndex = 10;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lblNombre.Location = new System.Drawing.Point(8, 81);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(77, 23);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lblCodigo.Location = new System.Drawing.Point(8, 38);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(67, 23);
+            this.lblCodigo.TabIndex = 1;
+            this.lblCodigo.Text = "Código";
+            // 
+            // mtbCodigo
+            // 
+            this.mtbCodigo.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.mtbCodigo.Location = new System.Drawing.Point(111, 35);
+            this.mtbCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.mtbCodigo.Mask = "99999";
+            this.mtbCodigo.Name = "mtbCodigo";
+            this.mtbCodigo.Size = new System.Drawing.Size(220, 30);
+            this.mtbCodigo.TabIndex = 0;
+            this.mtbCodigo.ValidatingType = typeof(int);
             // 
             // frmRegistro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 289);
+            this.ClientSize = new System.Drawing.Size(374, 297);
             this.Controls.Add(this.grbRegistro);
             this.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro - Academia";

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryAlliaAcademia
 {
-    public partial class frmInicio : Form
+    public partial class frmPlan : Form
     {
-        public frmInicio()
+        public frmPlan()
         {
             InitializeComponent();
         }
