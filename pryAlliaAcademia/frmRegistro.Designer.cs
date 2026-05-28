@@ -90,6 +90,7 @@
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnListado
             // 
@@ -101,6 +102,7 @@
             this.btnListado.TabIndex = 8;
             this.btnListado.Text = "Listado";
             this.btnListado.UseVisualStyleBackColor = true;
+            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
             // 
             // chkActivo
             // 
@@ -125,13 +127,19 @@
             // 
             // cmbPlan
             // 
+            this.cmbPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPlan.Font = new System.Drawing.Font("Tahoma", 11F);
             this.cmbPlan.FormattingEnabled = true;
+            this.cmbPlan.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
             this.cmbPlan.Location = new System.Drawing.Point(111, 121);
             this.cmbPlan.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPlan.Name = "cmbPlan";
             this.cmbPlan.Size = new System.Drawing.Size(220, 30);
             this.cmbPlan.TabIndex = 5;
+            this.cmbPlan.SelectedIndexChanged += new System.EventHandler(this.cmbPlan_SelectedIndexChanged);
             // 
             // txtNombre
             // 
@@ -141,6 +149,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(220, 30);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblPlan
             // 
@@ -180,11 +189,12 @@
             this.mtbCodigo.Font = new System.Drawing.Font("Tahoma", 11F);
             this.mtbCodigo.Location = new System.Drawing.Point(111, 35);
             this.mtbCodigo.Margin = new System.Windows.Forms.Padding(4);
-            this.mtbCodigo.Mask = "99999";
+            this.mtbCodigo.Mask = "999999";
             this.mtbCodigo.Name = "mtbCodigo";
             this.mtbCodigo.Size = new System.Drawing.Size(220, 30);
             this.mtbCodigo.TabIndex = 0;
             this.mtbCodigo.ValidatingType = typeof(int);
+            this.mtbCodigo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCodigo_MaskInputRejected);
             // 
             // frmRegistro
             // 

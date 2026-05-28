@@ -18,6 +18,13 @@ namespace pryAlliaAcademia
         public frmRegistro()
         {
             InitializeComponent();
+
+            txtNombre.Enabled = false;
+            cmbPlan.Enabled = false;
+            chkActivo.Enabled = false;
+            btnRegistrar.Enabled = false;
+            btnListado.Enabled = false;
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -52,6 +59,46 @@ namespace pryAlliaAcademia
             mtbCodigo.Clear();
             txtNombre.Clear();
             cmbPlan.SelectedIndex = -1;
+
+            MessageBox.Show("Registro exitoso", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void mtbCodigo_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            if (mtbCodigo.Text != "")   
+            {
+                txtNombre.Enabled = true;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "")
+            {
+                cmbPlan.Enabled = true;
+            }
+        }
+
+        private void cmbPlan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbPlan.SelectedIndex != -1)
+            {
+                chkActivo.Enabled = true;
+                btnRegistrar.Enabled = true;
+                btnListado.Enabled = true;
+            }
+        }
+
+        private void btnListado_Click(object sender, EventArgs e)
+        {
+            frmLIstado frmLIstado = new frmLIstado();
+            frmLIstado.ShowDialog();
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

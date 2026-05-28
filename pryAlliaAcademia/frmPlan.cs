@@ -16,5 +16,33 @@ namespace pryAlliaAcademia
         {
             InitializeComponent();
         }
+        private void CargarPlan()
+        {
+            if (txtNombre.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese un nombre de plan", "Completar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Focus();
+            }
+            else
+            {
+                boxPlan.Items.Add(txtNombre.Text);
+                txtNombre.Clear();
+                txtNombre.Focus();
+            }
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            CargarPlan();
+        }
+
+        private void txtNombre_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CargarPlan();
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

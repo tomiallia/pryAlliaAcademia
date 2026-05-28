@@ -37,12 +37,13 @@
             // 
             this.btnIniciar.Font = new System.Drawing.Font("Tahoma", 15F);
             this.btnIniciar.Location = new System.Drawing.Point(119, 154);
-            this.btnIniciar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(172, 41);
             this.btnIniciar.TabIndex = 0;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // lblTitulo
             // 
@@ -63,7 +64,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnIniciar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenida - Academia ";
