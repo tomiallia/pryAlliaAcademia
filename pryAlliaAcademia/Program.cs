@@ -16,7 +16,7 @@ namespace pryAlliaAcademia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPlan());
+            Application.Run(new frmInicio());
         }
     }
 }

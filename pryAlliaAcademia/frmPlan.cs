@@ -33,7 +33,7 @@ namespace pryAlliaAcademia
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            CargarPlan();
+            MessageBox.Show("¿Desea cargar el plan?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
         private void txtNombre_KeyDown(object sender, KeyEventArgs e)
@@ -43,6 +43,18 @@ namespace pryAlliaAcademia
                 CargarPlan();
                 e.SuppressKeyPress = true;
             }
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            frmLIstado frmLIstado = new frmLIstado();
+            frmLIstado.ShowDialog();
+            this.Hide();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

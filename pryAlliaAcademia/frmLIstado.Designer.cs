@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLIstado));
             this.gboxBuscar = new System.Windows.Forms.GroupBox();
-            this.rbtnTodo = new System.Windows.Forms.RadioButton();
-            this.rbtnCodigo = new System.Windows.Forms.RadioButton();
-            this.rbtnNombre = new System.Windows.Forms.RadioButton();
-            this.rbtnPlan = new System.Windows.Forms.RadioButton();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
+            this.rbtnPlan = new System.Windows.Forms.RadioButton();
+            this.rbtnNombre = new System.Windows.Forms.RadioButton();
+            this.rbtnCodigo = new System.Windows.Forms.RadioButton();
+            this.rbtnTodo = new System.Windows.Forms.RadioButton();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dgvListado = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gboxBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxBuscar
@@ -64,38 +64,29 @@
             this.gboxBuscar.TabStop = false;
             this.gboxBuscar.Text = "Buscar";
             // 
-            // rbtnTodo
+            // comboBox1
             // 
-            this.rbtnTodo.AutoSize = true;
-            this.rbtnTodo.Location = new System.Drawing.Point(6, 35);
-            this.rbtnTodo.Name = "rbtnTodo";
-            this.rbtnTodo.Size = new System.Drawing.Size(73, 27);
-            this.rbtnTodo.TabIndex = 0;
-            this.rbtnTodo.TabStop = true;
-            this.rbtnTodo.Text = "Todo";
-            this.rbtnTodo.UseVisualStyleBackColor = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(110, 167);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(162, 30);
+            this.comboBox1.TabIndex = 5;
             // 
-            // rbtnCodigo
+            // txtNombre
             // 
-            this.rbtnCodigo.AutoSize = true;
-            this.rbtnCodigo.Location = new System.Drawing.Point(6, 79);
-            this.rbtnCodigo.Name = "rbtnCodigo";
-            this.rbtnCodigo.Size = new System.Drawing.Size(88, 27);
-            this.rbtnCodigo.TabIndex = 1;
-            this.rbtnCodigo.TabStop = true;
-            this.rbtnCodigo.Text = "Código";
-            this.rbtnCodigo.UseVisualStyleBackColor = true;
+            this.txtNombre.Location = new System.Drawing.Point(110, 121);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(162, 30);
+            this.txtNombre.TabIndex = 4;
             // 
-            // rbtnNombre
+            // txtCodigo
             // 
-            this.rbtnNombre.AutoSize = true;
-            this.rbtnNombre.Location = new System.Drawing.Point(6, 124);
-            this.rbtnNombre.Name = "rbtnNombre";
-            this.rbtnNombre.Size = new System.Drawing.Size(98, 27);
-            this.rbtnNombre.TabIndex = 2;
-            this.rbtnNombre.TabStop = true;
-            this.rbtnNombre.Text = "Nombre";
-            this.rbtnNombre.UseVisualStyleBackColor = true;
+            this.txtCodigo.Location = new System.Drawing.Point(110, 79);
+            this.txtCodigo.Mask = "99999";
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(162, 30);
+            this.txtCodigo.TabIndex = 2;
+            this.txtCodigo.ValidatingType = typeof(int);
             // 
             // rbtnPlan
             // 
@@ -108,6 +99,39 @@
             this.rbtnPlan.Text = "Plan";
             this.rbtnPlan.UseVisualStyleBackColor = true;
             // 
+            // rbtnNombre
+            // 
+            this.rbtnNombre.AutoSize = true;
+            this.rbtnNombre.Location = new System.Drawing.Point(6, 124);
+            this.rbtnNombre.Name = "rbtnNombre";
+            this.rbtnNombre.Size = new System.Drawing.Size(98, 27);
+            this.rbtnNombre.TabIndex = 2;
+            this.rbtnNombre.TabStop = true;
+            this.rbtnNombre.Text = "Nombre";
+            this.rbtnNombre.UseVisualStyleBackColor = true;
+            // 
+            // rbtnCodigo
+            // 
+            this.rbtnCodigo.AutoSize = true;
+            this.rbtnCodigo.Location = new System.Drawing.Point(6, 79);
+            this.rbtnCodigo.Name = "rbtnCodigo";
+            this.rbtnCodigo.Size = new System.Drawing.Size(88, 27);
+            this.rbtnCodigo.TabIndex = 1;
+            this.rbtnCodigo.TabStop = true;
+            this.rbtnCodigo.Text = "Código";
+            this.rbtnCodigo.UseVisualStyleBackColor = true;
+            // 
+            // rbtnTodo
+            // 
+            this.rbtnTodo.AutoSize = true;
+            this.rbtnTodo.Location = new System.Drawing.Point(6, 35);
+            this.rbtnTodo.Name = "rbtnTodo";
+            this.rbtnTodo.Size = new System.Drawing.Size(73, 27);
+            this.rbtnTodo.TabIndex = 0;
+            this.rbtnTodo.TabStop = true;
+            this.rbtnTodo.Text = "Todo";
+            this.rbtnTodo.UseVisualStyleBackColor = true;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -117,45 +141,22 @@
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtCodigo
+            // dgvListado
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(110, 79);
-            this.txtCodigo.Mask = "99999";
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(162, 30);
-            this.txtCodigo.TabIndex = 2;
-            this.txtCodigo.ValidatingType = typeof(int);
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(110, 121);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(162, 30);
-            this.txtNombre.TabIndex = 4;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 167);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(162, 30);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.nombre,
             this.materia,
             this.activo});
-            this.dataGridView1.Location = new System.Drawing.Point(300, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(577, 247);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvListado.Location = new System.Drawing.Point(300, 25);
+            this.dgvListado.Name = "dgvListado";
+            this.dgvListado.RowHeadersWidth = 51;
+            this.dgvListado.RowTemplate.Height = 24;
+            this.dgvListado.Size = new System.Drawing.Size(577, 247);
+            this.dgvListado.TabIndex = 2;
             // 
             // codigo
             // 
@@ -190,7 +191,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 290);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.gboxBuscar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -199,7 +200,7 @@
             this.Text = "Listado - Academia";
             this.gboxBuscar.ResumeLayout(false);
             this.gboxBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,7 +216,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.MaskedTextBox txtCodigo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListado;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn materia;

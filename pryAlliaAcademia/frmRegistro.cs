@@ -100,5 +100,12 @@ namespace pryAlliaAcademia
         {
             this.Close();
         }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            frmPlan frmPlan = new frmPlan();
+            frmPlan.ShowDialog();
+            this.Close();
+        }
     }
 }

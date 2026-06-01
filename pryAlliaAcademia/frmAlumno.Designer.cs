@@ -45,7 +45,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblRegistro = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDni
@@ -185,22 +185,22 @@
             this.lblRegistro.TabIndex = 15;
             this.lblRegistro.Text = "FECHA REGISTRO";
             // 
-            // label1
+            // lblFecha
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(12, 455);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 23);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "FECHA ACTUALIZACIÓN";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.ForeColor = System.Drawing.Color.Red;
+            this.lblFecha.Location = new System.Drawing.Point(12, 455);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(210, 23);
+            this.lblFecha.TabIndex = 16;
+            this.lblFecha.Text = "FECHA ACTUALIZACIÓN";
             // 
             // frmAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 501);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblRegistro);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -219,7 +219,7 @@
             this.Controls.Add(this.lblDni);
             this.Font = new System.Drawing.Font("Tahoma", 11F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargar Alumno - Academia";
@@ -246,6 +246,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblRegistro;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblFecha;
     }
 }

@@ -41,12 +41,14 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.mtbCodigo = new System.Windows.Forms.MaskedTextBox();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.grbRegistro.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbRegistro
             // 
             this.grbRegistro.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.grbRegistro.Controls.Add(this.btnCargar);
             this.grbRegistro.Controls.Add(this.btnRegistrar);
             this.grbRegistro.Controls.Add(this.btnCancelar);
             this.grbRegistro.Controls.Add(this.btnListado);
@@ -63,7 +65,7 @@
             this.grbRegistro.Margin = new System.Windows.Forms.Padding(4);
             this.grbRegistro.Name = "grbRegistro";
             this.grbRegistro.Padding = new System.Windows.Forms.Padding(4);
-            this.grbRegistro.Size = new System.Drawing.Size(339, 267);
+            this.grbRegistro.Size = new System.Drawing.Size(339, 277);
             this.grbRegistro.TabIndex = 0;
             this.grbRegistro.TabStop = false;
             this.grbRegistro.Text = "Registro Materia / Asignatura";
@@ -196,11 +198,23 @@
             this.mtbCodigo.ValidatingType = typeof(int);
             this.mtbCodigo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCodigo_MaskInputRejected);
             // 
+            // btnCargar
+            // 
+            this.btnCargar.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.btnCargar.Location = new System.Drawing.Point(12, 239);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(319, 32);
+            this.btnCargar.TabIndex = 11;
+            this.btnCargar.Text = "Cargar de Plan";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 297);
+            this.ClientSize = new System.Drawing.Size(374, 307);
             this.Controls.Add(this.grbRegistro);
             this.Font = new System.Drawing.Font("Tahoma", 11F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -228,5 +242,6 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnListado;
+        private System.Windows.Forms.Button btnCargar;
     }
 }
