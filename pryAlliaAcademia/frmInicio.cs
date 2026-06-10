@@ -19,8 +19,8 @@ namespace pryAlliaAcademia
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            frmRegistro frmRegistro = new frmRegistro();
-            frmRegistro.ShowDialog();
+            frmMain frmMain = new frmMain();
+            frmMain.ShowDialog();
             this.Close();
         }
     }

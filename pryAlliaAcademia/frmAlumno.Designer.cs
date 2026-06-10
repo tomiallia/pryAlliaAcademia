@@ -44,14 +44,20 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblRegistro = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
+            this.dgvAlumnos = new System.Windows.Forms.DataGridView();
+            this.Coldni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Colnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Colapellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coldireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Colcontacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDni
             // 
             this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(12, 35);
+            this.lblDni.Location = new System.Drawing.Point(9, 21);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(43, 23);
             this.lblDni.TabIndex = 0;
@@ -60,7 +66,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(12, 88);
+            this.lblNombre.Location = new System.Drawing.Point(9, 74);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(77, 23);
             this.lblNombre.TabIndex = 1;
@@ -69,7 +75,7 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(12, 144);
+            this.lblApellido.Location = new System.Drawing.Point(9, 130);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(75, 23);
             this.lblApellido.TabIndex = 2;
@@ -78,7 +84,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(12, 196);
+            this.lblDireccion.Location = new System.Drawing.Point(9, 182);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(87, 23);
             this.lblDireccion.TabIndex = 3;
@@ -87,7 +93,7 @@
             // lblContacto
             // 
             this.lblContacto.AutoSize = true;
-            this.lblContacto.Location = new System.Drawing.Point(12, 250);
+            this.lblContacto.Location = new System.Drawing.Point(9, 236);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(83, 23);
             this.lblContacto.TabIndex = 4;
@@ -96,7 +102,7 @@
             // lblNacimiento
             // 
             this.lblNacimiento.AutoSize = true;
-            this.lblNacimiento.Location = new System.Drawing.Point(12, 307);
+            this.lblNacimiento.Location = new System.Drawing.Point(9, 293);
             this.lblNacimiento.Name = "lblNacimiento";
             this.lblNacimiento.Size = new System.Drawing.Size(159, 23);
             this.lblNacimiento.TabIndex = 5;
@@ -104,7 +110,7 @@
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(197, 32);
+            this.txtDni.Location = new System.Drawing.Point(194, 18);
             this.txtDni.Mask = "99.999.999";
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(167, 30);
@@ -112,28 +118,28 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(197, 85);
+            this.txtNombre.Location = new System.Drawing.Point(194, 71);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(167, 30);
             this.txtNombre.TabIndex = 7;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(197, 141);
+            this.txtApellido.Location = new System.Drawing.Point(194, 127);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(167, 30);
             this.txtApellido.TabIndex = 8;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(197, 193);
+            this.txtDireccion.Location = new System.Drawing.Point(194, 179);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(167, 30);
             this.txtDireccion.TabIndex = 9;
             // 
             // txtContacto
             // 
-            this.txtContacto.Location = new System.Drawing.Point(197, 247);
+            this.txtContacto.Location = new System.Drawing.Point(194, 233);
             this.txtContacto.Mask = "(999)000-0000";
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(167, 30);
@@ -141,7 +147,7 @@
             // 
             // txtNacimiento
             // 
-            this.txtNacimiento.Location = new System.Drawing.Point(197, 300);
+            this.txtNacimiento.Location = new System.Drawing.Point(194, 286);
             this.txtNacimiento.Mask = "00/00/0000";
             this.txtNacimiento.Name = "txtNacimiento";
             this.txtNacimiento.Size = new System.Drawing.Size(167, 30);
@@ -150,7 +156,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(16, 356);
+            this.btnListar.Location = new System.Drawing.Point(13, 342);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(112, 33);
             this.btnListar.TabIndex = 12;
@@ -159,7 +165,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(134, 356);
+            this.btnEditar.Location = new System.Drawing.Point(131, 342);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(112, 33);
             this.btnEditar.TabIndex = 13;
@@ -168,40 +174,79 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(252, 356);
+            this.btnEliminar.Location = new System.Drawing.Point(249, 342);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(112, 33);
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // lblRegistro
+            // dgvAlumnos
             // 
-            this.lblRegistro.AutoSize = true;
-            this.lblRegistro.ForeColor = System.Drawing.Color.Red;
-            this.lblRegistro.Location = new System.Drawing.Point(12, 413);
-            this.lblRegistro.Name = "lblRegistro";
-            this.lblRegistro.Size = new System.Drawing.Size(162, 23);
-            this.lblRegistro.TabIndex = 15;
-            this.lblRegistro.Text = "FECHA REGISTRO";
+            this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Coldni,
+            this.Colnombre,
+            this.Colapellido,
+            this.Coldireccion,
+            this.Colcontacto,
+            this.colNacimiento});
+            this.dgvAlumnos.Location = new System.Drawing.Point(378, 18);
+            this.dgvAlumnos.Name = "dgvAlumnos";
+            this.dgvAlumnos.RowHeadersWidth = 51;
+            this.dgvAlumnos.RowTemplate.Height = 24;
+            this.dgvAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAlumnos.Size = new System.Drawing.Size(898, 357);
+            this.dgvAlumnos.TabIndex = 15;
             // 
-            // lblFecha
+            // Coldni
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.ForeColor = System.Drawing.Color.Red;
-            this.lblFecha.Location = new System.Drawing.Point(12, 455);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(210, 23);
-            this.lblFecha.TabIndex = 16;
-            this.lblFecha.Text = "FECHA ACTUALIZACIÓN";
+            this.Coldni.HeaderText = "DNI";
+            this.Coldni.MinimumWidth = 6;
+            this.Coldni.Name = "Coldni";
+            this.Coldni.Width = 125;
+            // 
+            // Colnombre
+            // 
+            this.Colnombre.HeaderText = "Nombre";
+            this.Colnombre.MinimumWidth = 6;
+            this.Colnombre.Name = "Colnombre";
+            this.Colnombre.Width = 125;
+            // 
+            // Colapellido
+            // 
+            this.Colapellido.HeaderText = "Apellido";
+            this.Colapellido.MinimumWidth = 6;
+            this.Colapellido.Name = "Colapellido";
+            this.Colapellido.Width = 125;
+            // 
+            // Coldireccion
+            // 
+            this.Coldireccion.HeaderText = "Dirección";
+            this.Coldireccion.MinimumWidth = 6;
+            this.Coldireccion.Name = "Coldireccion";
+            this.Coldireccion.Width = 125;
+            // 
+            // Colcontacto
+            // 
+            this.Colcontacto.HeaderText = "Contacto";
+            this.Colcontacto.MinimumWidth = 6;
+            this.Colcontacto.Name = "Colcontacto";
+            this.Colcontacto.Width = 125;
+            // 
+            // colNacimiento
+            // 
+            this.colNacimiento.HeaderText = "Fecha de Nacimiento";
+            this.colNacimiento.MinimumWidth = 6;
+            this.colNacimiento.Name = "colNacimiento";
+            this.colNacimiento.Width = 125;
             // 
             // frmAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 501);
-            this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.lblRegistro);
+            this.ClientSize = new System.Drawing.Size(1297, 393);
+            this.Controls.Add(this.dgvAlumnos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnListar);
@@ -223,6 +268,7 @@
             this.Name = "frmAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargar Alumno - Academia";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,7 +291,12 @@
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label lblRegistro;
-        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.DataGridView dgvAlumnos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coldni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colnombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colapellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coldireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colcontacto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNacimiento;
     }
 }
