@@ -41,7 +41,7 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtContacto = new System.Windows.Forms.MaskedTextBox();
             this.txtNacimiento = new System.Windows.Forms.MaskedTextBox();
-            this.btnListar = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
@@ -59,7 +59,7 @@
             this.lblDni.AutoSize = true;
             this.lblDni.Location = new System.Drawing.Point(9, 21);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(43, 23);
+            this.lblDni.Size = new System.Drawing.Size(34, 18);
             this.lblDni.TabIndex = 0;
             this.lblDni.Text = "DNI";
             // 
@@ -68,7 +68,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(9, 74);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(77, 23);
+            this.lblNombre.Size = new System.Drawing.Size(60, 18);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre";
             // 
@@ -77,7 +77,7 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Location = new System.Drawing.Point(9, 130);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(75, 23);
+            this.lblApellido.Size = new System.Drawing.Size(55, 18);
             this.lblApellido.TabIndex = 2;
             this.lblApellido.Text = "Apellido";
             // 
@@ -86,7 +86,7 @@
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Location = new System.Drawing.Point(9, 182);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(87, 23);
+            this.lblDireccion.Size = new System.Drawing.Size(65, 18);
             this.lblDireccion.TabIndex = 3;
             this.lblDireccion.Text = "Dirección";
             // 
@@ -95,7 +95,7 @@
             this.lblContacto.AutoSize = true;
             this.lblContacto.Location = new System.Drawing.Point(9, 236);
             this.lblContacto.Name = "lblContacto";
-            this.lblContacto.Size = new System.Drawing.Size(83, 23);
+            this.lblContacto.Size = new System.Drawing.Size(66, 18);
             this.lblContacto.TabIndex = 4;
             this.lblContacto.Text = "Contacto";
             // 
@@ -104,7 +104,7 @@
             this.lblNacimiento.AutoSize = true;
             this.lblNacimiento.Location = new System.Drawing.Point(9, 293);
             this.lblNacimiento.Name = "lblNacimiento";
-            this.lblNacimiento.Size = new System.Drawing.Size(159, 23);
+            this.lblNacimiento.Size = new System.Drawing.Size(123, 18);
             this.lblNacimiento.TabIndex = 5;
             this.lblNacimiento.Text = "Fecha Nacimiento";
             // 
@@ -113,28 +113,28 @@
             this.txtDni.Location = new System.Drawing.Point(194, 18);
             this.txtDni.Mask = "99.999.999";
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(167, 30);
+            this.txtDni.Size = new System.Drawing.Size(167, 25);
             this.txtDni.TabIndex = 6;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(194, 71);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(167, 30);
+            this.txtNombre.Size = new System.Drawing.Size(167, 25);
             this.txtNombre.TabIndex = 7;
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(194, 127);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(167, 30);
+            this.txtApellido.Size = new System.Drawing.Size(167, 25);
             this.txtApellido.TabIndex = 8;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(194, 179);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(167, 30);
+            this.txtDireccion.Size = new System.Drawing.Size(167, 25);
             this.txtDireccion.TabIndex = 9;
             // 
             // txtContacto
@@ -142,7 +142,7 @@
             this.txtContacto.Location = new System.Drawing.Point(194, 233);
             this.txtContacto.Mask = "(999)000-0000";
             this.txtContacto.Name = "txtContacto";
-            this.txtContacto.Size = new System.Drawing.Size(167, 30);
+            this.txtContacto.Size = new System.Drawing.Size(167, 25);
             this.txtContacto.TabIndex = 10;
             // 
             // txtNacimiento
@@ -150,18 +150,19 @@
             this.txtNacimiento.Location = new System.Drawing.Point(194, 286);
             this.txtNacimiento.Mask = "00/00/0000";
             this.txtNacimiento.Name = "txtNacimiento";
-            this.txtNacimiento.Size = new System.Drawing.Size(167, 30);
+            this.txtNacimiento.Size = new System.Drawing.Size(167, 25);
             this.txtNacimiento.TabIndex = 11;
             this.txtNacimiento.ValidatingType = typeof(System.DateTime);
             // 
-            // btnListar
+            // btnCargar
             // 
-            this.btnListar.Location = new System.Drawing.Point(13, 342);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(112, 33);
-            this.btnListar.TabIndex = 12;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnCargar.Location = new System.Drawing.Point(13, 342);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(112, 33);
+            this.btnCargar.TabIndex = 12;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnEditar
             // 
@@ -243,13 +244,13 @@
             // 
             // frmAlumno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1297, 393);
             this.Controls.Add(this.dgvAlumnos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnListar);
+            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.txtNacimiento);
             this.Controls.Add(this.txtContacto);
             this.Controls.Add(this.txtDireccion);
@@ -288,7 +289,7 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.MaskedTextBox txtContacto;
         private System.Windows.Forms.MaskedTextBox txtNacimiento;
-        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dgvAlumnos;

@@ -59,8 +59,8 @@
             // registroToolStripMenuItem
             // 
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.materiaToolStripMenuItem,
             this.planToolStripMenuItem,
+            this.materiaToolStripMenuItem,
             this.alumnoToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
@@ -69,21 +69,21 @@
             // materiaToolStripMenuItem
             // 
             this.materiaToolStripMenuItem.Name = "materiaToolStripMenuItem";
-            this.materiaToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.materiaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.materiaToolStripMenuItem.Text = "Materia";
             this.materiaToolStripMenuItem.Click += new System.EventHandler(this.materiaToolStripMenuItem_Click);
             // 
             // planToolStripMenuItem
             // 
             this.planToolStripMenuItem.Name = "planToolStripMenuItem";
-            this.planToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.planToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.planToolStripMenuItem.Text = "Plan";
             this.planToolStripMenuItem.Click += new System.EventHandler(this.planToolStripMenuItem_Click);
             // 
             // alumnoToolStripMenuItem
             // 
             this.alumnoToolStripMenuItem.Name = "alumnoToolStripMenuItem";
-            this.alumnoToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.alumnoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.alumnoToolStripMenuItem.Text = "Alumno";
             this.alumnoToolStripMenuItem.Click += new System.EventHandler(this.alumnoToolStripMenuItem_Click);
             // 

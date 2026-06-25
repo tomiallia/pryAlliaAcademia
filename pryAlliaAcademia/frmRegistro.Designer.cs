@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistro));
             this.grbRegistro = new System.Windows.Forms.GroupBox();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnListado = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.mtbCodigo = new System.Windows.Forms.MaskedTextBox();
-            this.btnCargar = new System.Windows.Forms.Button();
             this.grbRegistro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,18 @@
             this.grbRegistro.TabIndex = 0;
             this.grbRegistro.TabStop = false;
             this.grbRegistro.Text = "Registro Materia / Asignatura";
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.btnCargar.Location = new System.Drawing.Point(12, 239);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(319, 32);
+            this.btnCargar.TabIndex = 11;
+            this.btnCargar.Text = "Cargar de Plan";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnRegistrar
             // 
@@ -198,18 +210,6 @@
             this.mtbCodigo.ValidatingType = typeof(int);
             this.mtbCodigo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCodigo_MaskInputRejected);
             // 
-            // btnCargar
-            // 
-            this.btnCargar.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.btnCargar.Location = new System.Drawing.Point(12, 239);
-            this.btnCargar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(319, 32);
-            this.btnCargar.TabIndex = 11;
-            this.btnCargar.Text = "Cargar de Plan";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -222,6 +222,7 @@
             this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro - Academia";
+            this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.grbRegistro.ResumeLayout(false);
             this.grbRegistro.PerformLayout();
             this.ResumeLayout(false);

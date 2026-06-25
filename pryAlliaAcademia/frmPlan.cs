@@ -56,5 +56,41 @@ namespace pryAlliaAcademia
         {
             this.Hide();
         }
+
+        private void btnCargar_Click_1(object sender, EventArgs e)
+        {
+            string plan = txtNombre.Text.Trim();
+
+            if (plan == "")
+            {
+                MessageBox.Show("Ingresá el nombre del plan.");
+                txtNombre.Focus();
+                return;
+            }
+
+            if (DatosAcademia.Planes.Contains(plan))
+            {
+                MessageBox.Show("Ese plan ya está cargado.");
+                txtNombre.Clear();
+                txtNombre.Focus();
+                return;
+            }
+
+            DatosAcademia.Planes.Add(plan);
+            boxPlan.Items.Add(plan);
+
+            txtNombre.Clear();
+            txtNombre.Focus();
+        }
+
+        private void frmPlan_Load(object sender, EventArgs e)
+        {
+            boxPlan.Items.Clear();
+
+            foreach (string plan in DatosAcademia.Planes)
+            {
+                boxPlan.Items.Add(plan);
+            }
+        }
     }
 }

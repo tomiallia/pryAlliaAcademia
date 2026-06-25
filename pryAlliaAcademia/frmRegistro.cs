@@ -107,5 +107,20 @@ namespace pryAlliaAcademia
             frmPlan.ShowDialog();
             this.Close();
         }
+
+        private void frmRegistro_Load(object sender, EventArgs e)
+        {
+            CargarPlanes();
+        }
+
+        private void CargarPlanes()
+        {
+            cmbPlan.Items.Clear();
+
+            foreach (string plan in DatosAcademia.Planes)
+            {
+                cmbPlan.Items.Add(plan);
+            }
+        }
     }
 }

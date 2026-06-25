@@ -91,6 +91,7 @@
             this.btnCargar.TabIndex = 5;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click_1);
             // 
             // frmPlan
             // 
@@ -109,6 +110,7 @@
             this.Name = "frmPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargar Plan - Academia";
+            this.Load += new System.EventHandler(this.frmPlan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
