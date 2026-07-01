@@ -42,7 +42,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(12, 29);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(77, 23);
+            this.lblNombre.Size = new System.Drawing.Size(60, 18);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
@@ -50,17 +50,17 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(95, 26);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(203, 30);
-            this.txtNombre.TabIndex = 1;
+            this.txtNombre.Size = new System.Drawing.Size(203, 25);
+            this.txtNombre.TabIndex = 0;
             this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
             // 
             // boxPlan
             // 
             this.boxPlan.FormattingEnabled = true;
-            this.boxPlan.ItemHeight = 22;
+            this.boxPlan.ItemHeight = 18;
             this.boxPlan.Location = new System.Drawing.Point(16, 62);
             this.boxPlan.Name = "boxPlan";
-            this.boxPlan.Size = new System.Drawing.Size(282, 114);
+            this.boxPlan.Size = new System.Drawing.Size(282, 112);
             this.boxPlan.TabIndex = 2;
             // 
             // btnListar
@@ -69,7 +69,7 @@
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(90, 33);
             this.btnListar.TabIndex = 3;
-            this.btnListar.Text = "Listar";
+            this.btnListar.Text = "Listado";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
@@ -78,7 +78,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(112, 182);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 33);
-            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -88,14 +88,14 @@
             this.btnCargar.Location = new System.Drawing.Point(208, 182);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(90, 33);
-            this.btnCargar.TabIndex = 5;
+            this.btnCargar.TabIndex = 1;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click_1);
             // 
             // frmPlan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(323, 236);
             this.Controls.Add(this.btnCargar);

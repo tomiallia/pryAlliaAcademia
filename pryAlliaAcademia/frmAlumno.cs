@@ -34,47 +34,141 @@ namespace pryAlliaAcademia
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (dgvAlumnos.SelectedRows.Count == 0)
+            if (editingRowIndex == -1)
             {
-                MessageBox.Show("Seleccione una fila para editar.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+                if (dgvAlumnos.CurrentRow == null || dgvAlumnos.CurrentRow.IsNewRow)
+                {
+                    MessageBox.Show("Seleccione una fila para editar.");
+                    return;
+                }
 
-            int selectedIndex = dgvAlumnos.SelectedRows[0].Index;
+                editingRowIndex = dgvAlumnos.CurrentRow.Index;
 
-            // Si no estamos en modo edición o se seleccionó otra fila, cargar valores en las cajas para editar
-            if (editingRowIndex != selectedIndex)
-            {
-                editingRowIndex = selectedIndex;
-                var row = dgvAlumnos.Rows[editingRowIndex];
-                txtDni.Text = row.Cells[0].Value?.ToString() ?? string.Empty;
-                txtNombre.Text = row.Cells[1].Value?.ToString() ?? string.Empty;
-                txtApellido.Text = row.Cells[2].Value?.ToString() ?? string.Empty;
-                txtDireccion.Text = row.Cells[3].Value?.ToString() ?? string.Empty;
-                txtContacto.Text = row.Cells[4].Value?.ToString() ?? string.Empty;
-                txtNacimiento.Text = row.Cells[5].Value?.ToString() ?? string.Empty;
+                txtDni.Text = dgvAlumnos.CurrentRow.Cells[0].Value.ToString();
+                txtNombre.Text = dgvAlumnos.CurrentRow.Cells[1].Value.ToString();
+                txtApellido.Text = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
+                txtDireccion.Text = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
+                txtContacto.Text = dgvAlumnos.CurrentRow.Cells[4].Value.ToString();
+                txtNacimiento.Text = dgvAlumnos.CurrentRow.Cells[5].Value.ToString();
+
+                MessageBox.Show("Modifique los datos y vuelva a tocar Editar para guardar.");
                 txtDni.Focus();
+            }
+            else
+            {
+                dgvAlumnos.Rows[editingRowIndex].Cells[0].Value = txtDni.Text;
+                dgvAlumnos.Rows[editingRowIndex].Cells[1].Value = txtNombre.Text;
+                dgvAlumnos.Rows[editingRowIndex].Cells[2].Value = txtApellido.Text;
+                dgvAlumnos.Rows[editingRowIndex].Cells[3].Value = txtDireccion.Text;
+                dgvAlumnos.Rows[editingRowIndex].Cells[4].Value = txtContacto.Text;
+                dgvAlumnos.Rows[editingRowIndex].Cells[5].Value = txtNacimiento.Text;
+
+                MessageBox.Show("Alumno editado correctamente.");
+
+                editingRowIndex = -1;
+
+                txtDni.Clear();
+                txtNombre.Clear();
+                txtApellido.Clear();
+                txtDireccion.Clear();
+                txtContacto.Clear();
+                txtNacimiento.Clear();
+
+                txtDni.Focus();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvAlumnos.CurrentRow == null || dgvAlumnos.CurrentRow.IsNewRow)
+            {
+                MessageBox.Show("Seleccioná una fila para borrar.", "Borrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            // Si ya estábamos en modo edición sobre la fila seleccionada, guardar cambios
-            var editRow = dgvAlumnos.Rows[editingRowIndex];
-            editRow.Cells[0].Value = txtDni.Text;
-            editRow.Cells[1].Value = txtNombre.Text;
-            editRow.Cells[2].Value = txtApellido.Text;
-            editRow.Cells[3].Value = txtDireccion.Text;
-            editRow.Cells[4].Value = txtContacto.Text;
-            editRow.Cells[5].Value = txtNacimiento.Text;
+            dgvAlumnos.Rows.Remove(dgvAlumnos.CurrentRow);
+            MessageBox.Show("Alumno eliminado correctamente.");
+        }
 
-            // Limpiar estado de edición
-            editingRowIndex = -1;
-            txtDni.Clear();
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtDireccion.Clear();
-            txtContacto.Clear();
-            txtNacimiento.Clear();
-            txtDni.Focus();
+        private void frmAlumno_Load(object sender, EventArgs e)
+        {
+            txtDni.Enabled = true;
+            txtNombre.Enabled = false;
+            txtApellido.Enabled = false;
+            txtDireccion.Enabled = false;
+            txtContacto.Enabled = false;
+            txtNacimiento.Enabled = false;
+            btnCargar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+        }
+
+        private void txtDni_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDni.Text != "")
+            {
+                txtNombre.Enabled = true;
+            }
+            else
+            {
+                txtNombre.Enabled = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "")
+            {
+                txtApellido.Enabled = true;
+            }
+            else
+            {
+                txtApellido.Enabled = false;
+            }
+        }
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            if (txtApellido.Text != "")
+            {
+                txtDireccion.Enabled = true;
+            }
+            else
+            {
+                txtDireccion.Enabled = false;
+            }
+        }
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDireccion.Text != "")
+            {
+                txtContacto.Enabled = true;
+            }
+            else
+            {
+                txtContacto.Enabled = false;
+            }
+        }
+        private void txtContacto_TextChanged(object sender, EventArgs e)
+        {
+            if (txtContacto.Text != "")
+            {
+                txtNacimiento.Enabled = true;
+            }
+            else
+            {
+                txtNacimiento.Enabled = false;
+            }
+        }
+        private void txtNacimiento_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNacimiento.Text != "")
+            {
+                btnCargar.Enabled = true;
+            }
+            else
+            {
+                btnCargar.Enabled = false;
+            }
         }
     }
 }

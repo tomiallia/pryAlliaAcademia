@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLIstado));
             this.gboxBuscar = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbPlan = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.rbtnPlan = new System.Windows.Forms.RadioButton();
@@ -49,7 +49,7 @@
             // 
             // gboxBuscar
             // 
-            this.gboxBuscar.Controls.Add(this.comboBox1);
+            this.gboxBuscar.Controls.Add(this.cmbPlan);
             this.gboxBuscar.Controls.Add(this.txtNombre);
             this.gboxBuscar.Controls.Add(this.txtCodigo);
             this.gboxBuscar.Controls.Add(this.rbtnPlan);
@@ -63,28 +63,31 @@
             this.gboxBuscar.TabIndex = 0;
             this.gboxBuscar.TabStop = false;
             this.gboxBuscar.Text = "Buscar";
+            this.gboxBuscar.Enter += new System.EventHandler(this.gboxBuscar_Enter);
             // 
-            // comboBox1
+            // cmbPlan
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 167);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(162, 30);
-            this.comboBox1.TabIndex = 5;
+            this.cmbPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPlan.FormattingEnabled = true;
+            this.cmbPlan.Location = new System.Drawing.Point(110, 167);
+            this.cmbPlan.Name = "cmbPlan";
+            this.cmbPlan.Size = new System.Drawing.Size(162, 26);
+            this.cmbPlan.TabIndex = 5;
+            this.cmbPlan.SelectedIndexChanged += new System.EventHandler(this.cmbPlan_SelectedIndexChanged);
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(110, 121);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(162, 30);
+            this.txtNombre.Size = new System.Drawing.Size(162, 25);
             this.txtNombre.TabIndex = 4;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(110, 79);
-            this.txtCodigo.Mask = "99999";
+            this.txtCodigo.Mask = "999999";
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(162, 30);
+            this.txtCodigo.Size = new System.Drawing.Size(162, 25);
             this.txtCodigo.TabIndex = 2;
             this.txtCodigo.ValidatingType = typeof(int);
             // 
@@ -93,44 +96,48 @@
             this.rbtnPlan.AutoSize = true;
             this.rbtnPlan.Location = new System.Drawing.Point(6, 170);
             this.rbtnPlan.Name = "rbtnPlan";
-            this.rbtnPlan.Size = new System.Drawing.Size(66, 27);
+            this.rbtnPlan.Size = new System.Drawing.Size(52, 22);
             this.rbtnPlan.TabIndex = 3;
             this.rbtnPlan.TabStop = true;
             this.rbtnPlan.Text = "Plan";
             this.rbtnPlan.UseVisualStyleBackColor = true;
+            this.rbtnPlan.CheckedChanged += new System.EventHandler(this.rbtnPlan_CheckedChanged);
             // 
             // rbtnNombre
             // 
             this.rbtnNombre.AutoSize = true;
             this.rbtnNombre.Location = new System.Drawing.Point(6, 124);
             this.rbtnNombre.Name = "rbtnNombre";
-            this.rbtnNombre.Size = new System.Drawing.Size(98, 27);
+            this.rbtnNombre.Size = new System.Drawing.Size(78, 22);
             this.rbtnNombre.TabIndex = 2;
             this.rbtnNombre.TabStop = true;
             this.rbtnNombre.Text = "Nombre";
             this.rbtnNombre.UseVisualStyleBackColor = true;
+            this.rbtnNombre.CheckedChanged += new System.EventHandler(this.rbtnNombre_CheckedChanged);
             // 
             // rbtnCodigo
             // 
             this.rbtnCodigo.AutoSize = true;
             this.rbtnCodigo.Location = new System.Drawing.Point(6, 79);
             this.rbtnCodigo.Name = "rbtnCodigo";
-            this.rbtnCodigo.Size = new System.Drawing.Size(88, 27);
+            this.rbtnCodigo.Size = new System.Drawing.Size(69, 22);
             this.rbtnCodigo.TabIndex = 1;
             this.rbtnCodigo.TabStop = true;
             this.rbtnCodigo.Text = "Código";
             this.rbtnCodigo.UseVisualStyleBackColor = true;
+            this.rbtnCodigo.CheckedChanged += new System.EventHandler(this.rbtnCodigo_CheckedChanged);
             // 
             // rbtnTodo
             // 
             this.rbtnTodo.AutoSize = true;
             this.rbtnTodo.Location = new System.Drawing.Point(6, 35);
             this.rbtnTodo.Name = "rbtnTodo";
-            this.rbtnTodo.Size = new System.Drawing.Size(73, 27);
+            this.rbtnTodo.Size = new System.Drawing.Size(60, 22);
             this.rbtnTodo.TabIndex = 0;
             this.rbtnTodo.TabStop = true;
             this.rbtnTodo.Text = "Todo";
             this.rbtnTodo.UseVisualStyleBackColor = true;
+            this.rbtnTodo.CheckedChanged += new System.EventHandler(this.rbtnTodo_CheckedChanged);
             // 
             // btnBuscar
             // 
@@ -155,7 +162,7 @@
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.RowHeadersWidth = 51;
             this.dgvListado.RowTemplate.Height = 24;
-            this.dgvListado.Size = new System.Drawing.Size(577, 247);
+            this.dgvListado.Size = new System.Drawing.Size(611, 247);
             this.dgvListado.TabIndex = 2;
             // 
             // codigo
@@ -174,7 +181,7 @@
             // 
             // materia
             // 
-            this.materia.HeaderText = "Materia";
+            this.materia.HeaderText = "Plan";
             this.materia.MinimumWidth = 6;
             this.materia.Name = "materia";
             this.materia.Width = 125;
@@ -190,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 290);
+            this.ClientSize = new System.Drawing.Size(925, 283);
             this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.gboxBuscar);
@@ -198,6 +205,7 @@
             this.Name = "frmLIstado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado - Academia";
+            this.Load += new System.EventHandler(this.frmListado_Load);
             this.gboxBuscar.ResumeLayout(false);
             this.gboxBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
@@ -213,7 +221,7 @@
         private System.Windows.Forms.RadioButton rbtnCodigo;
         private System.Windows.Forms.RadioButton rbtnTodo;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbPlan;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.MaskedTextBox txtCodigo;
         private System.Windows.Forms.DataGridView dgvListado;
