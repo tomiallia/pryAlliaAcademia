@@ -164,10 +164,15 @@ namespace pryAlliaAcademia
             if (txtNacimiento.Text != "")
             {
                 btnCargar.Enabled = true;
+                btnEditar.Enabled = true;
+                btnEliminar.Enabled = true;
             }
             else
             {
                 btnCargar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+
             }
         }
     }
